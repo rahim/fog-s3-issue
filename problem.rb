@@ -21,7 +21,6 @@ config = {
 
 s3 = Fog::Storage.new(config)
 bucket = s3.directories.new(key: 'litmus-dev-rahim-throwaway')
-binding.pry
 bucket.files.get('foo')
 # =>   <Fog::AWS::Storage::File
 #     key="foo",
