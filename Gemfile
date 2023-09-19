@@ -1,0 +1,7 @@
+  source 'https://rubygems.org'
+  # gem 'fog-aws', '= 3.19.0'
+  gem 'fog-aws', '= 1.4.0'
+  gem 'fog-core', '= 1.45.0'
+  gem 'fog-xml', '= 0.1.3'
+  gem 'mime-types'
+  gem 'pry-byebug'
