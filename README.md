@@ -35,5 +35,8 @@ What's different from our real world case?
 - ruby version ✅
 - use of IAM profile
 - region? account? bucket?
+- bucket config for my test bucket?
+
+Observation: that we see the ids in the initial response to the GET suggests we're hitting a different code path in our staging + production cases.
 
 Do we need to recheck our earlier reproduction steps in case AWS have fixed?
