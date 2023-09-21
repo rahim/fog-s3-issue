@@ -5,14 +5,15 @@ Bundler.require(:default)
 
 config = {
   provider: 'AWS',
-  region: 'us-west-2',
+  region: 'us-east-1',
   aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
   aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
 }
 
 s3 = Fog::Storage.new(config)
-bucket = s3.directories.new(key: 'litmus-dev-rahim-throwaway')
-bucket.files.get('foo')
+bucket = s3.directories.new(key: 'rahim-throwaway-us-east-1')
+file = bucket.files.create(key: 'foo', body: 'bar')
+file = bucket.files.get('foo')
 # =>   <Fog::AWS::Storage::File
 #     key="foo",
 #     cache_control=nil,
@@ -34,6 +35,4 @@ bucket.files.get('foo')
 #     tags=nil,
 #     website_redirect_location=nil
 #   >
-file = bucket.files.create(key: 'foo', body: 'bar')
-bucket.files.get('foo')
-file = bucket.files.create(key: 'foo', body: 'bar')
+i=0; loop { puts i+=1; file.save; sleep 0.5; }

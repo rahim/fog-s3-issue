@@ -29,12 +29,19 @@ Can be useful for seeing just what we care about.
 
 ## Reproduction
 
-What's different from our real world case?
+What's different from our real world case? (part II)
+
+./problem_iam.rb successfully reproduces on our staging host
 
 - gem versions ✅
 - ruby version ✅
-- use of IAM profile ✅
-- region? account? bucket? ✅
+
+- region? ✅
+
+- host IP/location?
+- bucket / bucket config?
+- use of IAM profile?
+- account?
 
 Observation: that we see the ids in the initial response to the GET suggests we're hitting a different code path in our staging + production cases.
 
