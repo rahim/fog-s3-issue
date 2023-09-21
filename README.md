@@ -33,10 +33,11 @@ What's different from our real world case?
 
 - gem versions ✅
 - ruby version ✅
-- use of IAM profile
-- region? account? bucket?
-- bucket config for my test bucket?
+- use of IAM profile ✅
+- region? account? bucket? ✅
 
 Observation: that we see the ids in the initial response to the GET suggests we're hitting a different code path in our staging + production cases.
+
+- could NewRelic be to blame?
 
 Do we need to recheck our earlier reproduction steps in case AWS have fixed?
