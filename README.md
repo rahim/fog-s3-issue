@@ -5,14 +5,14 @@ Run with
 ```
 $ export AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXX
 $ export AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXX
-$ DEBUG=1 EXCON_DEBUG=1 ./problem.rb
+$ DEBUG=1 EXCON_DEBUG=1 ./repro_s3_issue.rb
 ```
 
 
 Using
 
 ```
-$ DEBUG=1 EXCON_DEBUG=1 ./problem.rb | grep "amz-id\|GET\|PUT\|excon.request\|excon.response"
+$ DEBUG=1 EXCON_DEBUG=1 ./repro_s3_issue.rb | grep "amz-id\|GET\|PUT\|excon.request\|excon.response"
 excon.request
   :method              => "GET"
 excon.response
@@ -31,7 +31,7 @@ Can be useful for seeing just what we care about.
 
 What's different from our real world case? (part II)
 
-./problem_iam.rb successfully reproduces on our staging host
+./repro_s3_issue_iam.rb successfully reproduces on our staging host
 
 - gem versions ✅
 - ruby version ✅
