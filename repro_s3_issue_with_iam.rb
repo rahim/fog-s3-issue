@@ -6,7 +6,8 @@ Bundler.require(:default)
 config = {
   provider: 'AWS',
   region: 'us-east-1',
-  use_iam_profile: true
+  use_iam_profile: true,
+  connection_options: { retry_limit: 0 } # Retry masks the issue, we want to make it more likely here
 }
 
 s3 = Fog::Storage.new(config)

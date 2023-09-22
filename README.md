@@ -74,4 +74,4 @@ Traceback (most recent call last):
 ## Notes
 
 - region seems to matter, I've only seen the problem S3 behaviour in us-east-1
-- something about location of caller seems to change probabilities significantly (perhaps latency related). From my UK based laptop probability of a rejection seems _much_ lower than from a host within us-east-1, taking many hundreds of tries before a rejection from my laptop, but often 10s or less from an EC2 instance in us-east-1.
+- something about location of caller seems to change probabilities significantly (perhaps latency related). With default retry behaviour, from my UK based laptop probability of a rejection seems _much_ lower than from a host within us-east-1, taking many hundreds of tries before a rejection from my laptop, but often 10s or less from an EC2 instance in us-east-1. Removing retries makes reproduction much faster.

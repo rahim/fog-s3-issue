@@ -8,6 +8,7 @@ config = {
   region: 'us-east-1',
   aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
   aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+  connection_options: { retry_limit: 0 } # Retry masks the issue, we want to make it more likely here
 }
 
 s3 = Fog::Storage.new(config)
