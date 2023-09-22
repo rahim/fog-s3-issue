@@ -35,7 +35,7 @@ excon.response
 
 ## Reproduce S3 issue
 
-This demonstrates S3's new behaviour of sporadically rejecting requests that provide unwanted `x-amz-id-2` or `x-amz-request_id` headers.
+This demonstrates S3's new behaviour of sporadically rejecting requests that provide unwanted `x-amz-id-2` or `x-amz-request-id` headers.
 
 ```
 bundle
